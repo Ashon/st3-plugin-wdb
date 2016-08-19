@@ -1,0 +1,9 @@
+[
+    {
+        "caption": "wdb: Run WDB Server",
+        "command": "wdb_run_server"
+    }, {
+        "caption": "wdb: Stop WDB Server",
+        "command": "wdb_kill_server"
+    }
+]

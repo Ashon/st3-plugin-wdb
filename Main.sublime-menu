@@ -1,0 +1,14 @@
+[{
+	"id": "wdb",
+	"caption": "wdb",
+	"children": [
+        {
+            "caption": "run wdb server",
+            "command": "wdb_run_server"
+        },
+        {
+            "caption": "stop wdb server",
+            "command": "wdb_kill_server"
+        }
+    ]
+}]
