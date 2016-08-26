@@ -5,5 +5,8 @@
     }, {
         "caption": "wdb: Stop WDB Server",
         "command": "wdb_kill_server"
+    }, {
+        "caption": "wdb: Open WDB in browser",
+        "command": "wdb_open_in_browser"
     }
 ]

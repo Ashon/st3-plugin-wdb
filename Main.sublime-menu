@@ -9,6 +9,10 @@
         {
             "caption": "stop wdb server",
             "command": "wdb_kill_server"
+        },
+        {
+            "caption": "open in browser",
+            "command": "wdb_open_in_browser"
         }
     ]
 }]

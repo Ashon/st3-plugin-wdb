@@ -1,6 +1,7 @@
 
 import sublime, sublime_plugin
 import subprocess
+import webbrowser
 
 WDB_SERVER_ATTR = 'wdb_server'
 SUBPROCESS_CMD = 'wdb.server.py'
@@ -19,6 +20,12 @@ class wdb_kill_server(sublime_plugin.TextCommand):
 
     def run(self, edit):
         WdbServerSubprocessThread.stop()
+
+
+class wdb_open_in_browser(sublime_plugin.TextCommand):
+
+    def run(self, edit):
+        webbrowser.open_new('http://localhost:1984')
 
 
 class WdbServerSubprocessThread(object):
