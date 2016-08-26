@@ -1,5 +1,6 @@
 
-import sublime, sublime_plugin
+import sublime
+import sublime_plugin
 import subprocess
 import webbrowser
 
