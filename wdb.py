@@ -5,6 +5,7 @@ import subprocess
 import webbrowser
 
 WDB_SERVER_ATTR = 'wdb_server'
+WDB_SERVER_URL = 'http://localhost:1984'
 SUBPROCESS_CMD = 'wdb.server.py'
 
 
@@ -12,9 +13,6 @@ class wdb_run_server(sublime_plugin.TextCommand):
 
     def run(self, edit):
         WdbServerSubprocessThread.run()
-
-    def description(self):
-        return 'run wdb server'
 
 
 class wdb_kill_server(sublime_plugin.TextCommand):
@@ -29,7 +27,7 @@ class wdb_open_in_browser(sublime_plugin.TextCommand):
         wdb_server = getattr(sublime, WDB_SERVER_ATTR, None)
 
         if wdb_server:
-            webbrowser.open_new('http://localhost:1984')
+            webbrowser.open_new(WDB_SERVER_URL)
 
         else:
             print('wdb server is not running')
