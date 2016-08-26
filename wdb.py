@@ -25,7 +25,13 @@ class wdb_kill_server(sublime_plugin.TextCommand):
 class wdb_open_in_browser(sublime_plugin.TextCommand):
 
     def run(self, edit):
-        webbrowser.open_new('http://localhost:1984')
+        wdb_server = getattr(sublime, WDB_SERVER_ATTR, None)
+
+        if wdb_server:
+            webbrowser.open_new('http://localhost:1984')
+
+        else:
+            print('wdb server is not running')
 
 
 class WdbServerSubprocessThread(object):
