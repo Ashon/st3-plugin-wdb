@@ -5,17 +5,16 @@ Simple python wdb debugger plugin
 Install [wdb](https://github.com/Kozea/wdb) first.
 
 # Install
-Now this plugin is very inferior.
+Now, this plugin is very inferior.
 
-## Ubuntu
+- Ubuntu
+    ``` bash
+    # chdir sublime text package directory
+    $ cd ~/.config/sublime-text-3/Packages
 
-``` bash
-# chdir sublime text package directory
-$ cd ~/.config/sublime-text-3/Packages
-
-# clone this repo
-$ git clone https://github.com/Ashon/sublime-wdb
-```
+    # clone this repo
+    $ git clone https://github.com/Ashon/sublime-wdb
+    ```
 
 # Usage
 Open Command Pallet (`ctrl` + `shift` + `p`)
