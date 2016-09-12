@@ -15,5 +15,5 @@ $(VIRTUALENV_PATH):
 	virtualenv -p $(PYTHON) $@
 	$@/bin/$(PIP) install -r requirements.txt
 
-test:$(VIRTUALENV_PATH)
-	$</bin/$(LINT) $(SRCS)
+test:
+	$(LINT) $(SRCS)
