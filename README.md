@@ -9,11 +9,15 @@ Now, this plugin is very inferior.
 
 - Ubuntu
     ``` bash
+    # clone this repo
+    $ git clone https://github.com/Ashon/sublime-wdb
+
     # chdir sublime text package directory
     $ cd ~/.config/sublime-text-3/Packages
 
-    # clone this repo
-    $ git clone https://github.com/Ashon/sublime-wdb
+    # create symlink
+    $ ln -s [ GIT_REPO_PATH ]/src sublime-wdb
+
     ```
 
 # Usage
