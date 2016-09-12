@@ -2,6 +2,7 @@
 VIRTUALENV_PATH=venv
 PYTHON=python3.5
 PIP=pip
+PIP_REQUIREMENTS=requirements.txt
 LINT=flake8
 SRCS=src
 
@@ -13,7 +14,7 @@ clean:
 
 $(VIRTUALENV_PATH):
 	virtualenv -p $(PYTHON) $@
-	$@/bin/$(PIP) install -r requirements.txt
+	$@/bin/$(PIP) install -r $(PIP_REQUIREMENTS)
 
 test:
 	$(LINT) $(SRCS)
