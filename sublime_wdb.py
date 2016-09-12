@@ -61,6 +61,7 @@ class WdbServerSubprocessThread(object):
             wdb_server = getattr(sublime, WDB_SERVER_ATTR, None)
 
             if wdb_server:
+
                 wdb_server.kill()
                 del wdb_server
                 delattr(sublime, WDB_SERVER_ATTR)
