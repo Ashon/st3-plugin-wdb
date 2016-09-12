@@ -50,11 +50,9 @@ class WdbServerSubprocessThread(object):
         except Exception as e:
             print(e)
 
-
     @staticmethod
     def get_wdb_server():
         return getattr(sublime, WDB_SERVER_ATTR, None)
-
 
     @staticmethod
     def stop():
