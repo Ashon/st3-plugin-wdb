@@ -24,9 +24,7 @@ class wdb_kill_server(sublime_plugin.TextCommand):
 class wdb_open_in_browser(sublime_plugin.TextCommand):
 
     def run(self, edit):
-        wdb_server = getattr(sublime, WDB_SERVER_ATTR, None)
-
-        if wdb_server:
+        if WdbServerSubprocessThread.get_wdb_server():
             webbrowser.open_new(WDB_SERVER_URL)
 
         else:
@@ -39,9 +37,7 @@ class WdbServerSubprocessThread(object):
     def run():
 
         try:
-            existing_wdb_server = getattr(sublime, WDB_SERVER_ATTR, None)
-
-            if existing_wdb_server is None:
+            if WdbServerSubprocessThread.get_wdb_server() is None:
 
                 wdb_server_instance = subprocess.Popen(SUBPROCESS_CMD)
                 setattr(sublime, WDB_SERVER_ATTR, wdb_server_instance)
@@ -54,11 +50,16 @@ class WdbServerSubprocessThread(object):
         except Exception as e:
             print(e)
 
+
+    @staticmethod
+    def get_wdb_server():
+        return getattr(sublime, WDB_SERVER_ATTR, None)
+
+
     @staticmethod
     def stop():
         try:
-
-            wdb_server = getattr(sublime, WDB_SERVER_ATTR, None)
+            wdb_server = WdbServerSubprocessThread.get_wdb_server()
 
             if wdb_server:
 
